@@ -1,0 +1,17 @@
+.search{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+.ant-input{
+    width: 350px;
+    border-color: #92E0CD;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}

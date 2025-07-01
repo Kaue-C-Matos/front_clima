@@ -1,0 +1,17 @@
+.ant-card{
+    width: 350px;
+    margin: 10px;
+    border-width: 4px;
+    border-color: #92A8E0;
+    cursor: pointer;
+}
+
+.ant-card-body{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.profile{
+    margin: 0 10px 0 -5px;
+}
