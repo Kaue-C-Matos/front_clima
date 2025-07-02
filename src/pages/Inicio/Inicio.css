@@ -15,3 +15,11 @@
     align-items: center;
     justify-content: center;
 }
+
+.ant-pagination{
+    margin: 30px;
+}
+
+.ant-pagination-item:hover{
+    border-color: aqua;
+}
