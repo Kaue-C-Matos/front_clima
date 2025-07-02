@@ -1,0 +1,38 @@
+.clima{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ant-select{
+    width: 400px;
+    border-color: #92E0CD;
+}
+
+.informações{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.informações p{
+    font-size: larger;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.grafico{
+    width: 75%;
+    margin: 20px;
+}
+
+@media screen and(max-width: 450px){
+    .grafico{
+        width: 95%;
+    }
+}

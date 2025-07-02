@@ -10,7 +10,8 @@ function Header(){
     useEffect(()=>{
         const pathToKey = {
             "/": "1",
-            "/cadastro": "2"
+            "/cadastro": "2",
+            "/clima": "3"
         }
         const path = location.pathname
         const key = pathToKey[path] || 1
@@ -28,6 +29,9 @@ function Header(){
                     </Menu.Item>
                     <Menu.Item key="2">
                         <Link to="/cadastro">Cadastrar usuário</Link>
+                    </Menu.Item>
+                    <Menu.Item key="3">
+                        <Link to="/clima">Clima</Link>
                     </Menu.Item>
                 </Menu>
                 <img className="logo" src="sol.png" alt="sol" width={70}/>
