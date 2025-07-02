@@ -22,7 +22,7 @@ function Cadastro(){
     }
 
     return(
-        <Form name="user" onFinish={onFinish} onFinishFailed={onFinishFailed} className="formulario">
+        <Form name="user" form={form} onFinish={onFinish} onFinishFailed={onFinishFailed} className="formulario">
             <h1>Cadastrar novo usuário</h1>
             <Form.Item 
                 name="name" 
