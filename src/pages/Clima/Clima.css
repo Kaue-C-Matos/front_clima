@@ -31,8 +31,23 @@
     margin: 20px;
 }
 
-@media screen and(max-width: 450px){
+@media screen and (max-width: 450px){
+    .ant-select{
+        width: 300px;
+    }
+
     .grafico{
         width: 95%;
+        margin: 0;
+    }
+
+    .informações p{
+        margin: 5px;
+        display: block;
+        text-align: center;
+    }
+
+    .informações p img{
+        width: 25px;
     }
 }

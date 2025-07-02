@@ -1,6 +1,6 @@
 .ant-card{
     width: 350px;
-    margin: 10px;
+    margin: 5px;
     border-width: 4px;
     border-color: #92A8E0;
     cursor: pointer;
@@ -13,5 +13,11 @@
 }
 
 .profile{
-    margin: 0 10px 0 -5px;
+    margin: 0 5px 0 -15px;
+}
+
+@media screen and (max-width: 450px){
+    .ant-card{
+        width: 320px;
+    }
 }

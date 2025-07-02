@@ -1,4 +1,4 @@
-.ant-menu{
+.menu_desktop{
     font-weight: bold;
     background-color: #97F1F5;
     width: 100%;
@@ -6,12 +6,32 @@
 
 header{
     display: flex;
-    width: 100%;
     justify-content: space-around;
     background-color: #97F1F5;
     align-items: end;
 }
 
+.menu_mobile{
+    display: none;
+}
+
 .logo{
     margin: 10px;
+    object-fit: contain;
+}
+
+@media screen and (max-width: 450px){
+    .menu_desktop{
+        display: none;
+    }
+
+    .menu_mobile{
+        display: block;
+    }
+
+    header{
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 15px;
+    }
 }

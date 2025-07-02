@@ -49,7 +49,7 @@ function Inicio(){
                 </div>
                 <div>
                     <h3>Pesquise por e-mail</h3>
-                    <Input 
+                    <Input
                         value={email}
                         onChange={(e)=> setEmail(e.target.value)}
                     />

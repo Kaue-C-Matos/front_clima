@@ -3,9 +3,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 50px;
+    margin: 40px auto auto auto;
     padding: 15px;
     background: linear-gradient(#92A8E0 13%, #92E0CD 100%);
     border-radius: 10px;
     box-shadow: -5px 5px 7px black;
+    width: max-content;
 }
+
+

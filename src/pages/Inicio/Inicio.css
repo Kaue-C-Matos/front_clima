@@ -1,11 +1,12 @@
 .search{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     margin: 50px;
 }
 
 .ant-input{
-    width: 350px;
+    width: 300px;
     border-color: #92E0CD;
 }
 
@@ -22,4 +23,18 @@
 
 .ant-pagination-item:hover{
     border-color: aqua;
+}
+
+@media screen and (max-width: 450px ) {
+    .search{
+        margin: 5px;
+    }
+    
+    .ant-input{
+        width: 250px;
+    }
+
+    .list{
+        padding: 5px;
+    }
 }
