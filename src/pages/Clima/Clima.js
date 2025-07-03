@@ -6,6 +6,7 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import ChangeMap from "../../components/ChangeMap";
 import { Chart, CategoryScale, LinearScale, PointElement, LineElement, Tooltip, Legend } from "chart.js";
 import { Line } from "react-chartjs-2";
+import { CloudOutlined, MoonFilled, SunFilled } from "@ant-design/icons";
 const {Option} = Select
 
 const key = "b64112169b1d4f9abda162807250107"
@@ -152,7 +153,7 @@ function Clima(){
                 <MapContainer
                     center={mapCenter}
                     zoom={13}
-                    style={{ height: '400px', width: '50%', marginTop: '20px' }}
+                    style={{ height: "400px", width: "50%", marginTop: "20px"}}
                 >
                     <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" attribution="&copy; OpenStreetMap contributors"/>
                     <ChangeMap center={mapCenter}/>
@@ -161,18 +162,21 @@ function Clima(){
                     </Marker>
                 </MapContainer>
 
-                {weather ? (
-                    <section>
-                        {weather.is_day ? <p>Dia</p> : <p>Noite</p>}
-                        <p>Temperatura: {weather.temp_c}°C</p>
-                        <p>Sensação Térmica: {weather.feelslike_c}°C</p>
-                        <p>Umidade: {weather.humidity}%</p>
-                        <p>Condição: {weather.condition.text} <img src={weather.condition.icon} width={40} alt={weather.condition.text}/></p>
-                        <p>Vento: {weather.wind_kph}Km/h - {weather.wind_dir}</p>
-                        <p>Índice UV: {weather.uv}</p>
-                    </section>
+                <div className="card_clima">
+                    {weather ? (
+                        <section>
+                            {weather.is_day ? <p>Dia <SunFilled/></p> : <p>Noite  <MoonFilled/></p>}
+                            <p>Temperatura: {weather.temp_c}°C</p>
+                            <p>Sensação Térmica: {weather.feelslike_c}°C</p>
+                            <p>Umidade: {weather.humidity}%  <CloudOutlined/></p>
+                            <p>Condição: {weather.condition.text} <img src={weather.condition.icon} width={40} alt={weather.condition.text}/></p>
+                            <p>Vento: {weather.wind_kph}Km/h - {weather.wind_dir} </p>
+                            <p>Índice UV: {weather.uv}</p>
+                        </section>
 
-                ) : <p>Selecione uma cidade</p>}
+                    ) : <p>Selecione uma cidade</p>}
+
+                </div>
             </div>
             <div className="grafico">
                 <Line data={chartData} options={chartOptions}/>
