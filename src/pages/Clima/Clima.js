@@ -64,24 +64,31 @@ function Clima(){
                 })
                 setMapCenter([lat, lon])
 
-                const weatherData = await axios.get("https://api.weatherapi.com/v1/current.json", {
-                    params: {
-                        key: key,
-                        q: `${lat}, ${lon}`,
-                        lang: "pt"
-                    }
-                })
-                setWeather(weatherData.data.current)
+                try{
+                    const weatherData = await axios.get("https://api.weatherapi.com/v1/current.json", {
+                        params: {
+                            key: key,
+                            q: `${lat}, ${lon}`,
+                            lang: "pt"
+                        }
+                    })
+                    setWeather(weatherData.data.current)
 
-                const forecastData = await axios.get("https://api.weatherapi.com/v1/forecast.json", {
-                    params: {
-                        key: key,
-                        q: `${lat}, ${lon}`,
-                        lang: "pt",
-                        days: 1
-                    }
-                })
-                setForecast(forecastData.data)
+                    const forecastData = await axios.get("https://api.weatherapi.com/v1/forecast.json", {
+                        params: {
+                            key: key,
+                            q: `${lat}, ${lon}`,
+                            lang: "pt",
+                            days: 1
+                        }
+                    })
+                    setForecast(forecastData.data)
+                } catch(error) {
+                    if(error.response?.status === 401){
+                        alert("Erro: sua chave da API não é válida ou expirou")
+                    } 
+                    console.log(error)
+                }
             }
         } catch (error) {
             console.log(error)
